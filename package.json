@@ -1,0 +1,19 @@
+{
+  "name": "file-spare",
+  "version": "1.0.0",
+  "description": "sparing file storage lib",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "László Ivicz",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.23.0",
+    "@babel/core": "^7.23.2",
+    "@babel/node": "^7.22.19",
+    "@babel/preset-env": "^7.23.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.2.2"
+  }
+}
