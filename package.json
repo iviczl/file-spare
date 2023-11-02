@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "sparing file storage lib",
   "main": "src/index.js",
+  "type": "module",
   "scripts": {
-    "test": "test"
+    "build": "tsc"
   },
   "author": "László Ivicz",
   "license": "ISC",
@@ -13,7 +14,12 @@
     "@babel/core": "^7.23.2",
     "@babel/node": "^7.22.19",
     "@babel/preset-env": "^7.23.2",
+    "@types/md5": "^2.3.4",
+    "@types/node": "^20.8.10",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "md5": "^2.3.0"
   }
 }
