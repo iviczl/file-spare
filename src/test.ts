@@ -1,4 +1,4 @@
-import { FS } from './FS'
+import { FS } from './FS.js'
 
 const fs = FS('./data')
 fs.store('filename1', 'a very long string1')
