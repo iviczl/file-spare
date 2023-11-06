@@ -34,16 +34,17 @@ class FSClass {
         .map((row): [string, string] => {
           const index = row.indexOf(this.KEY_SEPARATOR)
           if (index > 0) {
-            return [row.substring(0, index), row.substring(index)]
+            return [row.substring(0, index), row.substring(index + 1)]
           } else {
             return ['', '']
           }
         })
         .filter((item) => item[0])
       this.dirContent = new Map<string, string>(rawContent)
+      console.log(this.dirContent)
     } catch (error) {
       console.error(
-        `Got an error trying to load the hash map file: {error.message}`
+        `Got an error trying to load the hash map file: ${error.message}`
       )
     }
   }
@@ -61,7 +62,7 @@ class FSClass {
       const actualFileName = this.dirContent.get(fileName) || ''
       return readFileSync(`${this.dirPath}/${actualFileName}`).toString()
     } catch (error) {
-      console.error(`Got an error trying to read the file: {error.message}`)
+      console.error(`Got an error trying to read the file: ${error.message}`)
     }
   }
 
@@ -84,7 +85,7 @@ class FSClass {
       this.dirContent.set(fileName, hash)
       this.writeContent()
     } catch (error) {
-      console.error(`Got an error trying to write the file: {error.message}`)
+      console.error(`Got an error trying to write the file: ${error.message}`)
     }
   }
 
